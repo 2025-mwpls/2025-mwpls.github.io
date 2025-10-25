@@ -1,5 +1,3 @@
-# MWPLS 2025
-
 
 Welcome!
 
