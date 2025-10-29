@@ -80,11 +80,10 @@ Minneapolis and get off at the East Bank stop.
 
 # Sponsors
 
-<a href="https://nsf.gov"><img src="NSF.png" width="200"></a>
+<a href="https://nsf.gov"><img src="NSF.png" width="200"></a>NSF
 
-![An image](./NSF.png)
+<a href="https://cs.unn.edu"><img src="Goldy.png" width="200"></a>CS
 
-![Another](./Goldy.png)
 
 
 # Past instances
