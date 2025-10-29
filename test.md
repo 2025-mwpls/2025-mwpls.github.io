@@ -83,7 +83,7 @@ Minneapolis and get off at the East Bank stop.
 # Sponsors
 
 <a href="https://nsf.gov"><img src="NSF.png" height="150"></a>
-<a href="https://cs.umn.edu"><img src="Goldy.png" height="150"></a>
+<a href="https://cs.umn.edu"><img src="UMN_stack-digital.png" height="150"></a>
 <a href="https://amazon.jobs/en/jobs/3050073/2026-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting"><img src="aws.png" height="150"></a>
 
 # Sponsors
