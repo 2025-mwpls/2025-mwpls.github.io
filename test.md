@@ -45,12 +45,17 @@ Minneapolis campus in room 3-180.
 
 ## Accommodation
 
-## Travel
+## Travel / Public Transit
 
 ### By air
 
 One can fly to the [Minneapolis St. Paul International
 Airport](https://www.mspairport.com/), code **MSP**.
+
+From the airport, take the Blue Line towards Minneapolis to the US
+Bank Stadium stop. From here, catch the Green Line towards St. Paul
+and get off at the East Bank stop. This is right in front of Keller
+Hall where the workshop is taking place.
 
 ### By rail
 
@@ -65,13 +70,6 @@ Builder](https://www.amtrak.com/empire-builder-train) which goes via
 St. Paul/Minneapolis from Chicago to Seattle.
 
 
-## Public Transit
-
-From the airport, take the Blue Line towards Minneapolis to the US
-Bank Stadium stop. From here, catch the Green Line towards St. Paul
-and get off at the East Bank stop. This is right in front of Keller
-Hall where the workshop is taking place.
-
 From the train station / Union Depot, take the Green Line towards
 Minneapolis and get off at the East Bank stop.
 
@@ -80,11 +78,26 @@ Minneapolis and get off at the East Bank stop.
 
 # Sponsors
 
-<a href="https://nsf.gov"><img src="NSF.png" width="200"></a>NSF
+<a href="https://nsf.gov"><img src="NSF.png" width="150"></a>
 
-<a href="https://cs.unn.edu"><img src="Goldy.png" width="200"></a>CS
+<a href="https://cs.unn.edu"><img src="Goldy.png" width="150"></a>
 
+# Sponsors
 
+<table>
+<tr>
+  <td><a href="https://nsf.gov"><img src="NSF.png" width="150"></a></td>
+  <td><a href="https://cs.unn.edu"><img src="Goldy.png" width="150"></a></td>
+</tr>
+<tr>
+  <td>National Science Foundation</td>
+  <td>University of Minnesota</td>
+</tr>
+<tr>
+  <td>National Science Foundation</td>
+  <td>Department of Computer Science and Engineering</td>
+</tr>
+</table>
 
 # Past instances
 
