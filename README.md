@@ -17,7 +17,7 @@ the PL community. There will be no formal proceedings, but abstracts
 and slides will be distributed on the web after the workshop.
 
 Organizers: 
-[Favonia](https://favonia.org/)
+[Favonia](https://favonia.org/), 
 [Gopalan Nadathur](https://cs.umn.edu/~ngopalan), and 
 [Eric Van Wyk](https://cs.umn.edu/~evw)
 
