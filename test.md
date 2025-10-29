@@ -43,6 +43,10 @@ Organizers:
 The workshop will be held in Keller Hall on the east bank of the
 Minneapolis campus in room 3-180.
 
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1SD-pEHoj8tcwQb_7fbRYS6no-FEsTHk&ehbc=2E312F"
+width="640" height="480"></iframe>
+
+
 ## Accommodation
 
 ## Travel / Public Transit
@@ -79,7 +83,7 @@ Minneapolis and get off at the East Bank stop.
 # Sponsors
 
 <a href="https://nsf.gov"><img src="NSF.png" width="150"></a>
-<a href="https://cs.unn.edu"><img src="Goldy.png" width="150"></a>
+<a href="https://cs.umn.edu"><img src="Goldy.png" width="150"></a>
 
 # Sponsors
 
