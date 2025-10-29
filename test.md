@@ -96,7 +96,7 @@ Minneapolis and get off at the East Bank stop.
 - Department of Computer Science and Engineering, University of
   Minnesota.
   
-  <a href="https://cs.umn.edu"><img src="UMN_stack-digital.png" height="150"></a>
+  <a href="https://cs.umn.edu"><img src="M_maroon.png" height="150"></a>
 
 - Amazon Web Services. Click the logo to learn more about their
 internship program in automated reasoning.
