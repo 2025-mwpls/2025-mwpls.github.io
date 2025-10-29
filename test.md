@@ -36,7 +36,7 @@ Organizers:
 - Saturday, December 13: Workshop
 
 
-<! -- # Program   -->
+<!-- # Program   -->
 
 # Attending
 
@@ -49,12 +49,20 @@ Minneapolis campus in room 3-180.
 
 ### By air
 
-One can fly to the Minneapolis St. Paul International Airport - MSP.
+One can fly to the [Minneapolis St. Paul International
+Airport](https://www.mspairport.com/), code **MSP**.
 
 ### By rail
 
-Amtrak has a nice connection between Minneapolis and Chicago that
-makes for a pleasant journey arriving at the Union Depot in St. Paul.
+Amtrak has a two connections between Minneapolis and Chicago that
+makes for a pleasant journey arriving at the 
+[Union Depot](https://www.uniondepot.org/) in St. Paul.
+
+The best option may be the
+[Borealis](https://www.amtrak.com/borealis-train) line between Chicago
+and Minneapols. One can also ride the [Empire
+Builder](https://www.amtrak.com/empire-builder-train) which goes via
+St. Paul/Minneapolis from Chicago to Seattle.
 
 
 ## Public Transit
@@ -72,5 +80,14 @@ Minneapolis and get off at the East Bank stop.
 
 # Sponsors
 
+![An image](./NSF.png)
+
+![Another](./Goldy.png)
+
+
 # Past instances
+
+ * [2023, University of Michigan](https://mwpls2023.engin.umich.edu/)
+ * [2024, University of Chicago](http://pl.cs.uchicago.edu/PLSummit/2024/)
+
 
