@@ -105,6 +105,10 @@ internship program in automated reasoning.
 
 # Sponsors
 
+- Galois, in Minneapolis, MN  ... in case they decide to sponsor
+
+  <a href="https://galois.com"><img src="galois.png" height="150"></a>
+
 <table>
 <tr>
   <td><a href="https://nsf.gov"><img src="NSF.png" width="150"></a></td>
