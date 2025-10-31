@@ -89,17 +89,17 @@ Minneapolis and get off at the East Bank stop.
 
 # Sponsors
 
-- National Science Foundation.
+- <a href="https://nsf.gov">National Science Foundation.</a>
 
   <a href="https://nsf.gov"><img src="NSF.png" height="150"></a>
   
-- Department of Computer Science and Engineering, University of
-  Minnesota.
+- <a href="https://cs.umn.edu">Department of Computer Science and
+  Engineering, University of Minnesota.</a>
   
   <a href="https://cs.umn.edu"><img src="M_maroon.png" height="150"></a>
 
-- Amazon Web Services. Click the logo to learn more about their
-internship program in automated reasoning.
+- Amazon Web Services - learn more about their
+  <a href="https://amazon.jobs/en/jobs/3050073/2026-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting">internship program in automated reasoning.</a>
 
   <a href="https://amazon.jobs/en/jobs/3050073/2026-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting"><img src="aws.png" height="150"></a>
 
