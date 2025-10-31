@@ -107,7 +107,7 @@ internship program in automated reasoning.
 
 - Galois, in Minneapolis, MN  ... in case they decide to sponsor
 
-  <a href="https://galois.com"><img src="galois.png" height="150"></a>
+  <a href="https://galois.com"><img src="galois.png" height="150" style="background-color:red;"></a>
 
 <table>
 <tr>
