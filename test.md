@@ -1,6 +1,6 @@
 
 <center>
-2025 Midwest Programming Language Summit
+<h1>2025 Midwest Programming Language Summit</h1>
 </center>
 
 Saturday, December 13, 2025
