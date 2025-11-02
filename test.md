@@ -40,8 +40,8 @@ Organizers:
 
 # Attending
 
-The workshop will be held in Keller Hall on the east bank of the
-Minneapolis campus in room 3-180.
+The workshop will be held in [Keller Hall](https://campusmaps.umn.edu/kenneth-h-keller-hall) on the east bank of the
+Minneapolis campus in the ground floor room 3-180.
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1SD-pEHoj8tcwQb_7fbRYS6no-FEsTHk&ehbc=2E312F"
 width="640" height="480"></iframe>
@@ -49,17 +49,30 @@ width="640" height="480"></iframe>
 
 ## Accommodation
 
-p## Travel / Public Transit
+The nearest hotel is the [Graduate by Hilton
+Hotel](https://www.hilton.com/en/hotels/mspgmgu-graduate-minneapolis/);
+it is only 1 block from Keller Hall.
+
+Another option is the [Days Hotel by Winham](https://www.wyndhamhotels.com/days-inn/minneapolis-minnesota/days-inn-hotel-university-ave-se/overview?CID=LC:DI:20160927:RIO:Local:SM-diwnct)
+on University Avenue; it about 6 blocks from Keller Hall.
+
+Other easy options include anything along the [Metro Transit Green
+Line](https://www.metrotransit.org/route/green); this include downtown
+Minneapolis (just a few stops away) all the way to downtown St. Paul
+(many stops further away).
+
+## Travel / Public Transit
 
 ### By air
 
 One can fly to the [Minneapolis St. Paul International
 Airport](https://www.mspairport.com/), code **MSP**.
-
-From the airport, take the Blue Line towards Minneapolis to the US
-Bank Stadium stop. From here, catch the Green Line towards St. Paul
-and get off at the East Bank stop. This is right in front of Keller
-Hall where the workshop is taking place.
+From the airport, take the 
+[Blue Line](https://www.metrotransit.org/route/blue) 
+towards Minneapolis to the US Bank Stadium stop. From here, catch the
+[Green Line](https://www.metrotransit.org/route/green)
+towards St. Paul and get off at the East Bank stop. This is right in
+front of Keller Hall where the workshop is taking place.
 
 ### By rail
 
@@ -73,21 +86,22 @@ and Minneapols. One can also ride the [Empire
 Builder](https://www.amtrak.com/empire-builder-train) which goes via
 St. Paul/Minneapolis from Chicago to Seattle.
 
-
-From the train station / Union Depot, take the Green Line towards
-Minneapolis and get off at the East Bank stop.
+From the train station / Union Depot, take the
+[Green Line](https://www.metrotransit.org/route/green)
+towards Minneapolis and get off at the East Bank stop.
 
 
 ## Parking
 
-# Sponsors
+Information on parking facilities can be found in the **University
+Parking** section of the [Keller Hall](https://campusmaps.umn.edu/kenneth-h-keller-hall) web page.
 
-<a href="https://nsf.gov"><img src="NSF.png" height="150"></a>
-<a href="https://cs.umn.edu"><img src="UMN_stack-digital.png" height="150"></a>
-<a href="https://amazon.jobs/en/jobs/3050073/2026-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting"><img src="aws.png" height="150"></a>
 
 
 # Sponsors
+
+We are fortunate to have several sponsors to cover the costs of
+putting on the workshop.
 
 - <a href="https://nsf.gov">National Science Foundation.</a>
 
@@ -117,7 +131,7 @@ Minneapolis and get off at the East Bank stop.
   <a href="https://sift.net"><img src="sift.png" height="150"></a>
 
 
-# Past instances
+# Recent past instances
 
  * [2023, University of Michigan](https://mwpls2023.engin.umich.edu/)
  * [2024, University of Chicago](http://pl.cs.uchicago.edu/PLSummit/2024/)
