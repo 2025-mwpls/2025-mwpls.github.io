@@ -17,7 +17,7 @@ the PL community. There will be no formal proceedings, but abstracts
 and slides will be distributed on the web after the workshop.
 
 Organizers: 
-[Favonia](https://favonia.org/)
+[Favonia](https://favonia.org/), 
 [Gopalan Nadathur](https://cs.umn.edu/~ngopalan), and 
 [Eric Van Wyk](https://cs.umn.edu/~evw)
 
@@ -49,7 +49,7 @@ width="640" height="480"></iframe>
 
 ## Accommodation
 
-## Travel / Public Transit
+p## Travel / Public Transit
 
 ### By air
 
@@ -92,22 +92,29 @@ Minneapolis and get off at the East Bank stop.
 - <a href="https://nsf.gov">National Science Foundation.</a>
 
   <a href="https://nsf.gov"><img src="NSF.png" height="150"></a>
-  
+
+
 - <a href="https://cs.umn.edu">Department of Computer Science and
   Engineering, University of Minnesota.</a>
   
   <a href="https://cs.umn.edu"><img src="M_maroon.png" height="150"></a>
 
-- Amazon Web Services - learn more about their
-  <a href="https://amazon.jobs/en/jobs/3050073/2026-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting">internship program in automated reasoning.</a>
+
+- Amazon Web Services: the automated reasoning group in Minneapolis,
+  with <a href="https://amazon.jobs/en/jobs/3050073/2026-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting">an
+  internship program in automated reasoning.</a>
 
   <a href="https://amazon.jobs/en/jobs/3050073/2026-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting"><img src="aws.png" height="150"></a>
 
-# Sponsors
+- <a href="https://galois.com">Galois</a>: the group in Minneapolis.
 
-- Galois, in Minneapolis, MN  ... in case they decide to sponsor ...
+  <a href="https://galois.com"><img src="galois.png" height="150"></a>
 
-  <a href="https://galois.com"><img src="galois.png" height="150" style="background-color:black;"></a>
+
+- <a href="https://sift.net">SIFT: Smart Information Flow
+  Technologies</a>
+  
+  <a href="https://sift.net"><img src="sift.png" height="150"></a>
 
 <table>
 <tr>
