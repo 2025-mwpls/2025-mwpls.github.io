@@ -1,20 +1,21 @@
 
-# Midwest PL Summit
+# 2025 Midwest Programming Language Summit
 
 Saturday, December 13, 2025
 
 [University of Minnesota](https://umn.edu),
 [Department of Computer Science and Engineering](https://cs.umn.edu)
 
-The Midwest PL Summit is an informal workshop to foster the exchange
-of ideas and to promote collaboration among faculty and students in
-the Greater Midwest area. Anyone interested in programming languages
-and compilers — including applications to areas such as systems,
-software engineering, and human-computer interaction — is welcome to
-attend. Our aim is to have a broad selection of talks and posters
-about ongoing research and any other topics that may be of interest to
-the PL community. There will be no formal proceedings, but abstracts
-and slides will be distributed on the web after the workshop.
+The [Midwest PL Summit](https://mwpls.org) is an informal workshop to
+foster the exchange of ideas and to promote collaboration among
+faculty and students in the Greater Midwest area. Anyone interested in
+programming languages and compilers — including applications to areas
+such as systems, software engineering, and human-computer interaction
+— is welcome to attend. Our aim is to have a broad selection of talks
+and posters about ongoing research and any other topics that may be of
+interest to the PL community. There will be no formal proceedings, but
+abstracts and slides will be distributed on the web after the
+workshop.
 
 Organizers: 
 [Favonia](https://favonia.org/), 
@@ -24,14 +25,15 @@ Organizers:
 
 
 # Dates
-- TBD: Deadline to 
+- Friday, November 14: Deadline to 
   [Submit Talk and Poster Proposals](https://forms.gle/wvwAzPzLdRsFEzKR7)
   and
   [Apply for Travel Grants](https://forms.gle/JrroCo1eexijSPJF8)
 
-- TBD: Notification of Decisions
+- Wednesday, November 19: Notification of Decisions
 
-- TBD: Deadline to [Register to Attend](https://forms.gle/oKL5qQW4SiG2vaAA7)
+- Monday, November 24: 
+  Deadline to [Register to Attend](https://forms.gle/oKL5qQW4SiG2vaAA7)
 
 - Saturday, December 13: Workshop
 
@@ -40,8 +42,10 @@ Organizers:
 
 # Attending
 
-The workshop will be held in [Keller Hall](https://campusmaps.umn.edu/kenneth-h-keller-hall) on the east bank of the
-Minneapolis campus in the ground floor room 3-180.
+The workshop will be held in [Keller
+Hall](https://campusmaps.umn.edu/kenneth-h-keller-hall), the home of
+the Computer Science and Engineering Department on the east bank of the
+Minneapolis campus.
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1SD-pEHoj8tcwQb_7fbRYS6no-FEsTHk&ehbc=2E312F"
 width="640" height="480"></iframe>
@@ -56,10 +60,20 @@ it is only 1 block from Keller Hall.
 Another option is the [Days Hotel by Winham](https://www.wyndhamhotels.com/days-inn/minneapolis-minnesota/days-inn-hotel-university-ave-se/overview?CID=LC:DI:20160927:RIO:Local:SM-diwnct)
 on University Avenue; it about 6 blocks from Keller Hall.
 
+Just across the Mississippi is the 
+[Courtyard by Marriott](https://www.marriott.com/en-us/hotels/mspdc-courtyard-minneapolis-downtown/overview/),
+another option within walking distance.
+
 Other easy options include anything along the [Metro Transit Green
 Line](https://www.metrotransit.org/route/green); this include downtown
 Minneapolis (just a few stops away) all the way to downtown St. Paul
 (many stops further away).
+
+Note that more information, specifically about the options along the
+Green Line will be added soon.
+
+suppress header things
+
 
 ## Travel / Public Transit
 
@@ -129,11 +143,5 @@ putting on the workshop.
   Technologies</a>
   
   <a href="https://sift.net"><img src="sift.png" height="150"></a>
-
-
-# Recent past instances
-
- * [2023, University of Michigan](https://mwpls2023.engin.umich.edu/)
- * [2024, University of Chicago](http://pl.cs.uchicago.edu/PLSummit/2024/)
 
 
