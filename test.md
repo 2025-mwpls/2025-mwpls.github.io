@@ -192,7 +192,7 @@ height="150" width="150"></a>
 </table>
   <a href="https://sift.net"><img src="sift.png" width="1288"></a>
 
-# Test 8
+# Test 9
 
 <table>
 <tr>
@@ -209,7 +209,7 @@ height="150" width="150"></a>
   <a href="https://galois.com"><img src="galois.png" height="150" width="572"></a>
 </tr>
 <tr>
-  <a href="https://sift.net"><img src="sift.png" height="100"></a>
+  <a href="https://sift.net"><img src="sift.png" height="150"></a>
   </tr>
 </table>
 
