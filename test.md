@@ -34,16 +34,16 @@ This year's event is being organized by
 The important dates to keep in mind and deadlines to adhere to are the
 following:
 
-<ul>
-<li><b>Friday, November 14, 2025:</b> Deadline for
-  <i><a href="https://forms.gle/wvwAzPzLdRsFEzKR7">talk and poster proposals</a></i>
-  and to <i><a href="https://forms.gle/JrroCo1eexijSPJF8">apply for travel grants</a></i>.</li>
-<li><b>Wednesday, November 19, 2025:</b> Notification deadline for
-talk/poster acceptance and grant awards.</li> 
-<li><b>Monday, November 24, 2025:</b> Deadline to <i><a
-href="https://forms.gle/oKL5qQW4SiG2vaAA7">register to attend</a></i>.
-<li><b>Saturday, December 13, 2025:</b> Meeting date</li>
-</ul>
+
+- **Friday, November 14, 2025:** Deadline for
+  *[talk and poster proposals](https://forms.gle/wvwAzPzLdRsFEzKR7)*
+  and to
+  *[apply for travel grants](https://forms.gle/JrroCo1eexijSPJF8)*.
+- **Wednesday, November 19, 2025:** Notification deadline for
+talk/poster acceptance and grant awards
+- **Monday, November 24, 2025:** Deadline to 
+  *[register to attend](https://forms.gle/oKL5qQW4SiG2vaAA7)*.
+- **Saturday, December 13, 2025:** Meeting date.
 
 <!-- # Program   -->
 
