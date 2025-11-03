@@ -192,12 +192,12 @@ height="150" width="150"></a>
 </table>
   <a href="https://sift.net"><img src="sift.png" width="1288"></a>
 
-# Test 6
+# Test 7
 
 <table>
 <tr>
 <a href="https://nsf.gov"><img src="NSF.png" height="150" width="150"></a>
-<img src="spacer.png" height="150" width="20">
+<img src="spacer.png" height="150" width="10">
 <a href="https://cs.umn.edu"><img src="cse.png"
   height="100" width="813"></a>
   </tr>
@@ -205,7 +205,7 @@ height="150" width="150"></a>
   <a
   href="https://amazon.jobs/en/jobs/3050073/2026-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting"><img
   src="aws.png" height="150" width="293"></a>
-  <img src="spacer.png" height="150" width="20">
+  <img src="spacer.png" height="150" width="30">
   <a href="https://galois.com"><img src="galois.png" height="150" width="572"></a>
 </tr>
 </table>
