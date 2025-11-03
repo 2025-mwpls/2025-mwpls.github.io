@@ -36,12 +36,12 @@ following:
 
 <ul>
 <li><b>Friday, November 14, 2025:</b> Deadline for
-  <a href="https://forms.gle/wvwAzPzLdRsFEzKR7"><i>talk and poster proposals</i></a>
-  and to <a href="https://forms.gle/JrroCo1eexijSPJF8"><i>apply for travel grants</i></a>.
+  <i><a href="https://forms.gle/wvwAzPzLdRsFEzKR7">talk and poster proposals</a></i>
+  and to <i><a href="https://forms.gle/JrroCo1eexijSPJF8">apply for travel grants</a></i>.
 <li><b>Wednesday, November 19, 2025:</b> Notification deadline for
 talk/poster acceptance and grant awards.</li> 
-<li><b>Monday, November 24, 2025:</b> Deadline to <a
-href="https://forms.gle/oKL5qQW4SiG2vaAA7"><i>[register to attend</i></a>.
+<li><b>Monday, November 24, 2025:</b> Deadline to <i><a
+href="https://forms.gle/oKL5qQW4SiG2vaAA7">register to attend</a></i>.
 <li><b>Saturday, December 13, 2025:</b> Meeting date</li>
 </ul>
 
