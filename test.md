@@ -192,13 +192,13 @@ height="150" width="150"></a>
 </table>
   <a href="https://sift.net"><img src="sift.png" width="1288"></a>
 
-# Test 4
+# Test 5
 
 <table>
 <tr>
 <a href="https://nsf.gov"><img src="NSF.png" height="150" width="150"></a>
 <a href="https://cs.umn.edu"><img src="cse.png"
-  height="150" width="1220"></a>
+  height="100" width="813"></a>
   </tr>
 <tr>
   <a
