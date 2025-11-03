@@ -152,4 +152,40 @@ height="150"></a></td>
 </table>
   <a href="https://sift.net"><img src="sift.png" height="150"></a>
 
+# TEST
 
+<table>
+<tr>
+<td><a href="https://nsf.gov"><img src="NSF.png"
+height="150" width="150"></a></td>
+<td>
+  <a href="https://cs.umn.edu"><img src="M_maroon.png"
+  height="150" width="273"></a>
+</td>
+<td>
+  <a
+  href="https://amazon.jobs/en/jobs/3050073/2026-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting"><img
+  src="aws.png" height="150" width="293"></a>
+</td>
+<td>
+  <a href="https://galois.com"><img src="galois.png" height="150" width="572"></a>
+</td>
+</tr>
+</table>
+  <a href="https://sift.net"><img src="sift.png" height="150"></a>
+
+
+sift 509 x 62
+      1231 x 150
+      
+aws  1200 x 630
+      293 x 150
+      
+galois 691 x 181
+       572 x 150
+       
+nsf 602 x 602
+     150 x  150
+     
+M  1947 x 1071
+    273 x 150
