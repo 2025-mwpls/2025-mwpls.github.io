@@ -152,7 +152,7 @@ height="150"></a></td>
 </table>
   <a href="https://sift.net"><img src="sift.png" height="150"></a>
 
-# TEST
+# TEST 2
 
 <table>
 <tr>
@@ -172,7 +172,7 @@ height="150" width="150"></a></td>
 </td>
 </tr>
 </table>
-  <a href="https://sift.net"><img src="sift.png" height="150"></a>
+  <a href="https://sift.net"><img src="sift.png" width="1288"></a>
 
 
 sift 509 x 62
