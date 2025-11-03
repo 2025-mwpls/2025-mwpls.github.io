@@ -22,18 +22,18 @@ registration and submissions:
  * [2024, University of Chicago](http://pl.cs.uchicago.edu/PLSummit/2024/)
  * [2025, University of Minnesota](https://2025.mwpls.org)
 
-5
+6
 
 # Markdown
 
 - **Friday, November 14, 2025:** Deadline for
-  [talk and poster proposals](https://forms.gle/wvwAzPzLdRsFEzKR7)
+  *[talk and poster proposals](https://forms.gle/wvwAzPzLdRsFEzKR7)*
   and to
-  [>apply for travel grants](https://forms.gle/JrroCo1eexijSPJF8).
+  *[apply for travel grants](https://forms.gle/JrroCo1eexijSPJF8)*.
 - **Wednesday, November 19, 2025:** Notification deadline for
 talk/poster acceptance and grant awards
 - **Monday, November 24, 2025:** Deadline to 
-  [register to attend](https://forms.gle/oKL5qQW4SiG2vaAA7).
+  *[register to attend](https://forms.gle/oKL5qQW4SiG2vaAA7)*.
 - **Saturday, December 13, 2025:** Meeting date.
 
 
