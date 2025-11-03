@@ -22,7 +22,7 @@ registration and submissions:
  * [2024, University of Chicago](http://pl.cs.uchicago.edu/PLSummit/2024/)
  * [2025, University of Minnesota](https://2025.mwpls.org)
 
-8
+9
 
 # Markdown
 
@@ -46,7 +46,7 @@ talk/poster acceptance and grant awards
   <li><b>Wednesday, November 19, 2025:</b> Notification deadline for
 talk/poster acceptance and grant awards.</li> 
 <li><b>Monday, November 24, 2025:</b> Deadline to <i><a
-href="https://forms.gle/oKL5qQW4SiG2vaAA7">register to attend</a>.</i>
+href="https://forms.gle/oKL5qQW4SiG2vaAA7">register to attend</a>.</i></li>
 </ul>
 
 # HTML - broken
