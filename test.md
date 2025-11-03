@@ -37,7 +37,7 @@ following:
 <ul>
 <li><b>Friday, November 14, 2025:</b> Deadline for
   <i><a href="https://forms.gle/wvwAzPzLdRsFEzKR7">talk and poster proposals</a></i>
-  and to <i><a href="https://forms.gle/JrroCo1eexijSPJF8">apply for travel grants</a></i>.
+  and to <i><a href="https://forms.gle/JrroCo1eexijSPJF8">apply for travel grants</a></i>.</li>
 <li><b>Wednesday, November 19, 2025:</b> Notification deadline for
 talk/poster acceptance and grant awards.</li> 
 <li><b>Monday, November 24, 2025:</b> Deadline to <i><a
