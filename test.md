@@ -129,7 +129,7 @@ The event is being supported by the [National Science
 Foundation](https://nsf.gov), the [Department of Computer Science at
 the University of Minnesota](https://cs.umn.edu), the automated
 reasoning group in Minneapolis ([an internship program in automated
-reasoning](https://amazon.jobs/en/jobs/3050073/2026-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting)
+reasoning](https://amazon.jobs/en/jobs/3050073/2026-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting))
 of *Amazon Web Services*, the [Galois](https://galois.com) group in
 Minneapolis and [SIFT: Smart Information Flow
   Technologies](https://sift.net). 
