@@ -46,7 +46,7 @@ talk/poster acceptance and grant awards
 <li><b>Wednesday, November 19, 2025:</b> Notification deadline for
 talk/poster acceptance and grant awards.</li> 
 <li><b>Monday, November 24, 2025:</b> Deadline to <i><a
-href="https://forms.gle/oKL5qQW4SiG2vaAA7">register to attend</a></i>.
+href="https://forms.gle/oKL5qQW4SiG2vaAA7">register to attend</a>.</i>
 <li><b>Saturday, December 13, 2025:</b> Meeting date</li>
 </ul>
 
