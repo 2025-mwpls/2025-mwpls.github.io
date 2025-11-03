@@ -1,5 +1,5 @@
 <center>
-<h1>2025 Midwest Programming Language Summit</h1>
+<h1>2025 Midwest Programming Languages Summit</h1>
 </center>
 
 The 2025 Midwest Programming Languages Summit will take place on
