@@ -134,65 +134,6 @@ of *Amazon Web Services*, the [Galois](https://galois.com) group in
 Minneapolis and [SIFT: Smart Information Flow
   Technologies](https://sift.net). 
 
-<table>
-<tr>
-<td><a href="https://nsf.gov"><img src="NSF.png"
-height="150"></a></td>
-<td>
-  <a href="https://cs.umn.edu"><img src="M_maroon.png"
-  height="150"></a>
-</td>
-<td>
-  <a href="https://amazon.jobs/en/jobs/3050073/2026-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting"><img src="aws.png" height="150"></a>
-</td>
-<td>
-  <a href="https://galois.com"><img src="galois.png" height="150"></a>
-</td>
-</tr>
-</table>
-  <a href="https://sift.net"><img src="sift.png" height="150"></a>
-
-# TEST 2
-
-<table>
-<tr>
-<td><a href="https://nsf.gov"><img src="NSF.png"
-height="150" width="150"></a></td>
-<td>
-  <a href="https://cs.umn.edu"><img src="M_maroon.png"
-  height="150" width="273"></a>
-</td>
-<td>
-  <a
-  href="https://amazon.jobs/en/jobs/3050073/2026-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting"><img
-  src="aws.png" height="150" width="293"></a>
-</td>
-<td>
-  <a href="https://galois.com"><img src="galois.png" height="150" width="572"></a>
-</td>
-</tr>
-<tr><td>
-  <a href="https://sift.net"><img src="sift.png" width="1288"></a>
-  </td></tr>
-</table>
-
-# Test 3
-
-<table>
-<tr>
-<a href="https://nsf.gov"><img src="NSF.png"
-height="150" width="150"></a>
-  <a href="https://cs.umn.edu"><img src="M_maroon.png"
-  height="150" width="273"></a>
-  <a
-  href="https://amazon.jobs/en/jobs/3050073/2026-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting"><img
-  src="aws.png" height="150" width="293"></a>
-  <a href="https://galois.com"><img src="galois.png" height="150" width="572"></a>
-</tr>
-</table>
-  <a href="https://sift.net"><img src="sift.png" width="1288"></a>
-
-# Test 9
 
 <table>
 <tr>
@@ -212,21 +153,3 @@ height="150" width="150"></a>
   <a href="https://sift.net"><img src="sift.png" height="150"></a>
   </tr>
 </table>
-
-sift 509 x 62
-      1231 x 150
-      
-aws  1200 x 630
-      293 x 150
-      
-galois 691 x 181
-       572 x 150
-       
-nsf 602 x 602
-     150 x  150
-     
-M  1947 x 1071
-    273 x 150
-
-cse 1724 x 212
-    1220 x 150
