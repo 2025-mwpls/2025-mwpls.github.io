@@ -22,7 +22,7 @@ registration and submissions:
  * [2024, University of Chicago](http://pl.cs.uchicago.edu/PLSummit/2024/)
  * [2025, University of Minnesota](https://2025.mwpls.org)
 
-10
+
 
 # Markdown
 
@@ -50,7 +50,7 @@ href="https://forms.gle/oKL5qQW4SiG2vaAA7">register to attend</a>.</i></li>
 <li><b>Saturday, December 13, 2025:</b> Meeting date</li>
 </ul>
 
-# HTML - broken
+# HTML - fixed
 
 <ul>
 <li><b>Friday, November 14, 2025:</b> Deadline for
