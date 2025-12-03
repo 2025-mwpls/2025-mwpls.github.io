@@ -306,7 +306,7 @@ Hall. Dinner will be an informal, buy-your-own affair, but we intend to organize
   <tr>
     <td>10:50-11:50</td>
     <td>
-      (3-180 Keller Hall) <b>Session 2 of contributed talks</b> (Chair: TBD)
+      (3-180 Keller Hall) <b>Session 2 of contributed talks</b> (Chair: Jeremy Siek)
       <table class="session-table">
         <tr>
           <td>10:50-11:05</td>
