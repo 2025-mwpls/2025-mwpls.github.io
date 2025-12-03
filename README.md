@@ -233,7 +233,7 @@ Hall. Dinner will be an informal, buy-your-own affair, but we intend to organize
   <tr>
     <td>9:20-10:20</td>
     <td>
-      (3-180 Keller Hall) <b>Session 1 of contributed talks</b> (Chair: TBD)
+      (3-180 Keller Hall) <b>Session 1 of contributed talks</b> (Chair: Max New)
       <table class="session-table">
         <tr>
           <td>9:20-9:35</td>
