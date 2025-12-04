@@ -536,7 +536,7 @@ Hall. Dinner will be an informal, buy-your-own affair, but we intend to organize
   <tr>
     <td>14:50-16:05</td>
     <td>
-      (3-180 Keller Hall): <b>Session 3 of contributed talks</b> (Chair: TBD)
+      (3-180 Keller Hall): <b>Session 3 of contributed talks</b> (Chair: Garrett Morris)
       <table class="session-table">
         <tr>
           <td>14:50-15:05</td>
@@ -629,7 +629,7 @@ Hall. Dinner will be an informal, buy-your-own affair, but we intend to organize
   <tr>
     <td>16:35-17:35</td>
     <td>
-      (3-180 Keller Hall): <b>Session 4 of contributed talks</b> (Chair: TBD)
+      (3-180 Keller Hall): <b>Session 4 of contributed talks</b> (Chair: Jean-Baptiste Jeannin)
       <table class="session-table">
         <tr>
           <td>16:35-16:50</td>
