@@ -162,7 +162,7 @@ table tr {
 
 The 2025 Midwest Programming Languages Summit will take place on
 <i>Saturday, December 13, 2025</i>, hosted by the [*Department of
-Computer Science and Engineering*](https:cs.umn.edu)  at the
+Computer Science and Engineering*](https://cs.umn.edu)  at the
 [*University of Minnesota, Twin Cities*](https://umn.edu).
 
 The [*Midwest Programming Languages Summit*](https://mwpls.org) is an
