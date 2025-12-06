@@ -1,0 +1,692 @@
+% $Header:
+% /cvsroot/latex-beamer/latex-beamer/solutions/conference-talks/conference-ornate-20min.en.tex,v 1.6 2004/10/07 20:53:08 tantau Exp $
+
+\documentclass[handout]{beamer}
+%\documentclass{beamer}
+\usepackage{xspace}
+\usepackage{listings}
+\usepackage{relsize}
+\usepackage{proof}
+\RequirePackage{amsmath,amssymb}
+\usepackage{pgfarrows}
+
+% remove next three lines for animated slides
+\usepackage{pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm,landscape]
+\mode<handout>{\setbeamercolor{background canvas}{bg=black!5}}
+
+\def\kwd#1{\ensuremath{\text{\ttfamily #1}}\xspace}
+
+\def\ktype{\kwd{Type}}
+\def\sep{\; | \;}
+\def\app{\,}
+\def\ra{\rightarrow}
+
+\newcommand{\eq}{{\it eq}}
+\newcommand{\refl}{{\it refl}}
+\newcommand{\sarr}{{\it arr}}
+\newcommand{\sapp}{{\it app}}
+\newcommand{\slam}{{\it lam}}
+\newcommand{\sty}{{\it ty}}
+\newcommand{\stm}{{\it tm}}
+\newcommand{\of}{{\it of}}
+\newcommand{\ofapp}{{\it of\_app}}
+\newcommand{\oflam}{{\it of\_lam}}
+
+\newcommand{\lambdax}[3]{\lambda #1 : #2.\, #3}
+\newcommand{\typedpi}[3]{\Pi #1 : #2.\, #3}
+
+\newcommand{\lfder}[2]{#1 \vdash #2}
+\newcommand{\seq}[4]{#1;#2;#3\longrightarrow #4}
+\newcommand{\seqsans}[2]{#1\longrightarrow #2}
+
+%\newcommand{\subs}[2]{#1[#2]}
+
+%\input{header}
+% This file is a solution template for:
+
+% - Talk at a conference/colloquium.
+% - Talk length is about 20min.
+% - Style is ornate.
+
+
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  %\usetheme{Boadilla}
+  %\usetheme{Dresden}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[latin1]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+
+\title[Reasoning about LF Specifications]{Towards a Logic for\\
+  Reasoning About LF Specifications}
+
+
+\author{Gopalan Nadathur}
+% - Give the names in the same order as the appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute{Department of Computer
+  Science and Engineering \\
+University of Minnesota}
+
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date[LIX, Ecole Polytechnique, Nov 2018] % (optional, should be abbreviation of conference name)
+{Joint work with Mary Southern}
+% - Either use conference name or its abbreviation.
+% - Not really informative to the audience, more for people (including
+%   yourself) who are reading the slides online
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{The Logical Framework (LF)}
+
+A typed lambda calculus in which types are permitted to depend on
+terms
+\begin{align*}
+  \text{Kinds} & \qquad           K ::= \ktype \sep \typedpi{x}{A}{K}\\
+  \text{Type Families} &\qquad   A, B ::= a \sep \typedpi{x}{A}{B} \sep A\app M \\
+  \text{Objects}& \qquad         M, N ::= c \sep x \sep \lambdax{x}{A}{M} \sep M\app N
+\end{align*}
+
+Well-formed expressions of each category are characterized by typing
+judgements
+
+\medskip
+Such judgements are parameterized by \emph{signatures} ($\Sigma$) and
+\emph{contexts} ($\Gamma$)
+
+\medskip
+The focus in this paper will be on judgements of the form $\Gamma
+\vdash_\Sigma M : A$
+
+\medskip
+Note that types can depend on the context in such judgements
+
+\medskip
+The calculus also builds in invariance under $\lambda$-conversion
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Specifications in LF}
+
+The encoding of the types, terms, rules, etc, that constitute an object
+system is realized by defining a suitable signature
+
+\bigskip
+For example, let $\Sigma$ be the signature
+
+\vspace{-0.5cm}
+\begin{center}
+\begin{tabular}{l}
+
+\begin{tabular}{ll}
+     $\sty : \ktype$ & $\sarr : \sty \ra \sty \ra \sty$ \\[7pt]
+     $\stm : \ktype$ & $\sapp : \stm \ra \stm \ra \stm$\\
+                     & $\slam : \sty \ra (\stm \ra \stm) \ra \stm$\\[7pt]
+\end{tabular}
+
+\\
+\begin{tabular}{l}
+$\of : \stm \ra \sty \ra \ktype$\\[5pt]
+
+$\ofapp :\typedpi{M_1}{\stm}
+                 {\typedpi{M_2}{\stm}
+                          {\typedpi{{\it Ty}_1}{\sty}
+                                   {\typedpi{{\it Ty}_2}{\sty}}}}$\\
+\quad$\of\app M_1\app (\sarr\app {\it Ty}_1\app {\it Ty}_2) \ra
+            \of\app M_2\app {\it Ty}_1 \ra
+            \of\app (\sapp\app M_1\app M_2)\app {\it Ty}_2$\\[5pt]
+$\oflam  : \typedpi{{\it Ty}_1}{\sty}
+                   {\typedpi{{\it Ty}_2}{\sty}
+                            {\typedpi{M}{\stm \ra \stm}{}}}$\\
+\ $\typedpi{x}{\stm}
+                {\typedpi{y}{\of\app x\app {\it Ty}_1 \ra 
+                    \of\app (M\app x)\app {\it Ty_2}}{
+                      \of \app (\slam \app {\it Ty}_1 \app  M) \app
+                               (\sarr\app {\it Ty}_1\app {\it Ty}_2)}}$
+\end{tabular}
+
+\end{tabular}
+\end{center}
+
+Then $\vdash_\Sigma D : \of \app M \app A$ is derivable in LF if $D$
+represents a derivation in the STLC that shows that $M$ has the type $A$
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Proving Properties About Object Systems}
+
+One approach to stating meta-theorems about an object system is to
+encode them as an LF type as exemplified below
+
+\begin{tabbing}
+\quad\=\qquad\=\kill
+\>${\it eq} : \sty \ra \sty \ra \ktype$\\
+\>${\it refl} : \typedpi{T}{\sty}{{\it eq}\app T \app T}$\\[5pt]
+
+\>$\mbox{\it ty\_uniq} : \typedpi{M}{\stm}{\typedpi{{\it
+      Ty}_1}{\sty}{\typedpi{{\it Ty}_2}{\sty}{}}}$\\
+\>\> $\of \app M \app {\it Ty}_1 \ra \of \app M \app {\it Ty}_2 \ra
+     {\it eq}\app {\it Ty}_1 \app {\it Ty}_2 \ra \ktype$
+\end{tabbing}
+
+\uncover<2->{The proof then takes the form of additions to the
+  signature to show that the type is inhabited for relevant inputs}
+
+\bigskip
+\uncover<3->{A logic complementing this approach can also be
+  described; this logic can be used to prove $\forall\exists$ formulas}
+
+\bigskip
+\uncover<4->{Our goal is to design a flexible logic that works over LF
+  judgements and that is not constained by a particular approach}
+\end{frame}
+
+\begin{frame}
+\frametitle{Characterizing Contexts in LF Judgements}
+
+Formulas in the logic will be built over LF typing judgements
+denoted by $\{ G \vdash M : A\}$
+
+\medskip
+Contexts here must be capable of representing two components
+
+\begin{itemize}
+  \item An explicit part arising from bindings encountered
+    specifically in types
+
+  \smallskip
+  \item An unspecified part with bound variables that could also be
+    used in terms
+\end{itemize}
+
+\medskip
+These possibilities are treated using context variables followed
+by sequences of type assignments to nominal constants
+\begin{align*}
+G \quad &::= \quad \Gamma\ |\ \cdot\ |\ G,n:A
+\end{align*} 
+
+$\Gamma$ represents context variables and $n$ represents nominal constants
+\end{frame}
+
+\begin{frame}
+\frametitle{Context Schemas and Instances}
+
+A context variable can be annotated by the name of a context schema
+that encodes structure in the LF context it represents
+
+\medskip
+Schema definitions identify such structure via a union of block
+descriptions
+\begin{align*}
+Block \ &::=\ (x_1:A_1,\ldots,x_n:A_n)[y_1:B_1,\ldots,y_m:B_m]\\
+Blocks \ &::=\ Block\ |\ Blocks,Block\\
+Context\ Schema \ &::=\ id = Blocks
+\end{align*}
+
+\medskip
+A declaration sequence $n_1:C_1,\ldots,n_m:C_m$ is an \emph{instance}
+of a block $(x_1:A_1,\ldots,x_n:A_n)[y_1:B_1,\ldots,y_m:B_m]$ if, for $1 \leq i \leq m$,
+\[C_i = B_i[t_1/x_1,\ldots,t_n/x_n,n_1/y_1,\ldots,n_{i-1}/y_{i-1}]\]
+
+\medskip
+A context satisfies a context schema if it comprises a collection of
+declaration sequences that instantiate some of its blocks
+\end{frame}
+
+\begin{frame}
+\frametitle{The Formulas of the Logic}
+
+Formulas are constructed from atomic ones representing typing judgements
+relative to a collection of context schemas
+\begin{align*}
+  F\ ::= \ & \top\ |\ \bot\ |\ \{\lfder{G}{M : A}\} |\ F_1\wedge F_2\ |\\
+           & F_1\vee F_2\ |\ F_1\supset F_2\ |\ \forall X.F\ |\ \exists X.F\ |\ \Pi_{id}\Gamma.F\ |
+\end{align*}
+
+Here $X$ represents an LF object level variable and $id$ is the name
+of a context schema
+
+\medskip
+\begin{uncoverenv}<2->
+Closed formulas are interpreted relative to an LF signature $\Sigma$
+and using derivability in LF, e.g.
+
+\smallskip
+\begin{itemize}
+\item $\{\lfder{G}{M:A}\}$ is true if $G \vdash_\Sigma M : A$ is
+  derivable in LF
+
+\smallskip
+\item $\forall X.F$ is true if $F[t/X]$ holds
+  for every closed expression $t$
+
+\smallskip
+\item $\Pi_{id} \Gamma. F$ holds if $F[G/\Gamma]$ holds for every
+  valid LF context $G$ that satisfies the context schema $id$
+\end{itemize}
+\end{uncoverenv}
+
+\medskip
+\uncover<3->{Quantification over object variables is \emph{untyped}
+  but typing constraints can be imposed by LF judgements in the scope}
+
+%% For example, given the context schema definition $
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{An Example}
+
+Let $\Sigma$ be the signature for the STLC identified earlier
+
+\medskip
+Let the collection of context schemas contain
+\[ tyctx = (T:ty).[x:tm,y:\of~x~T] \]
+
+
+Then the uniqueness of type assignment for the STLC is represented by
+the following formula
+\begin{tabbing}
+\quad\=\qquad\=\qquad\=\kill
+\>$\Pi_{tyctx}\Gamma.\forall E.\forall {\it Ty}_1.\forall {\it Ty}_2.\forall D_1.\forall D_2.$\\
+\>\> $\{\lfder{\Gamma}{D_1:\of~E~{\it Ty}_1}\}\supset \{\lfder{\Gamma}{D_2:\of~E~{\it Ty}_2}\}\supset $\\
+\>\>\>$\exists D_3.\{\lfder{\cdot}{D_3:eq\app {\it Ty}_1\app {\it Ty}_2}\}$
+\end{tabbing}
+
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Sequents and Partially Elaborated Contexts}
+
+Sequents have the form $\seq{\Psi}{\mathcal{C}}{\Delta}{F}$ where
+
+\smallskip
+\begin{itemize}
+\item $\Psi$ is a collection of (object level) eigenvariables
+
+\smallskip
+\item $\mathcal{C}$ is a collection of declarations of the form
+  $\Gamma : id\lbrack {b_1,\ldots,b_n}\rbrack$
+
+\smallskip
+\item $\Delta$ is a set of (assumption) formulas, and
+
+\smallskip
+\item $F$ is a (conclusion) formula
+\end{itemize}
+
+\bigskip
+Some requirements that must be satisfied by sequents
+
+\smallskip
+\begin{itemize}
+\item In a declaration $\Gamma : id\lbrack
+  {b_1,\ldots,b_n}\rbrack$, $id$ must name a context schema and
+  $b_1,\ldots,b_n$ must be block instances of $id$
+
+\smallskip
+\item All (object level) variables appearing in $\mathcal{C}$ must be
+  from $\Psi$
+
+\smallskip
+\item All object and context level variables in $\Delta$ and $F$
+must be from $\Psi$ and $\mathcal{C}$ respectively
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{The Meaning of a Sequent}
+
+The goal is to define a notion of validity for
+$\seq{\Psi}{\mathcal{C}}{\Delta}{F}$  
+
+\begin{itemize}
+\item<2-> A declaration $\Gamma : id\lbrack
+  {b_1,\ldots,b_n}\rbrack$ is to be read as
+  $\Gamma_1,b_1,\ldots,\Gamma_n,b_n,\Gamma_{n+1}$ where each
+  $\Gamma_i$ is a context variable
+
+\medskip
+\item<3-> An LF context is valid under a substitution $\theta$ for
+  $\Gamma$ declared as above if it is a valid LF context that results
+  from  
+
+  \begin{itemize}
+  \item replacing each $\Gamma_i$ by an LF context and
+
+  \smallskip
+  \item applying the substitution $\theta$ to each $b_i$
+  \end{itemize}
+  
+\medskip
+\item<4-> A closed sequent of the form $\seqsans{\Delta}{F}$ is 
+  valid if $F$ holds or some formula in $\Delta$ does not hold
+
+  \medskip
+
+\item<5-> Finally $\seq{\Psi}{\mathcal{C}}{\Delta}{F}$ is 
+valid if any closed instance of $\seqsans{\Delta}{F}$ obtained as
+follows is valid
+\begin{itemize}
+\item applying a substitution $\theta$ for the variables in $\Psi$ and
+
+\smallskip
+\item for each variable in $\mathcal{C}$, substituting an LF context
+  that is valid for that variable  under $\theta$ 
+  
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{ A Restriction on Formulas and Sequents}
+
+We want derivability in our proof system to be invariant under
+$\lambda$-conversion
+
+\bigskip
+We therefore build in $\lambda$-conversion and describe
+proof rules based on $\beta\eta$-long normal forms
+
+\bigskip
+However, this is acceptable only if all the expressions we consider
+have such a form
+
+\bigskip
+Towards this end, we use a notion of weak well-typing that is like LF
+typing but forgets dependencies
+
+\bigskip
+More specifically, two atomic types $(a\app t_1 \app \cdots \app t_n)$
+and $(a\app s_1 \app \cdots s_n)$ match regardless of whether $t_i$
+and $s_i$ are identical
+
+\bigskip
+All expressions in a sequent must then be weakly
+well-typed under some assignment of types to its eigenvariables
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{The Structure of the Proof System}
+
+The primary theoretical concern in designing the proof rules is
+soundness, i.e.
+
+\begin{quotation}
+  \noindent If the premise sequents are valid then the conclusion
+  sequent must be valid
+\end{quotation}
+
+\bigskip
+The usefulness of the proof system will be addressed in an empirical
+manner
+
+\bigskip
+One other consideration for our proof rules: the premise sequents
+should be weakly well-typeable if the conclusion is
+
+\bigskip
+Most rules have an easy structure, the main complexity is with the
+case analysis rule for LF judgements with atomic types
+\end{frame}
+
+\begin{frame}
+\frametitle{Analyzing LF Derivability for an Atomic Type}
+
+The sequent under consideration has the form
+\[\seq{\mathcal{C}}{\Psi}{\Delta\uplus\big\{\{G \vdash {M : a\app
+    N_1\ldots\app N_m}\}\big\}}{F}\]
+
+\medskip
+\uncover<2->{
+The typing judgement is derivable only if there is a constant in
+$\Sigma$ or a nominal constant in $G$ with type
+\[\typedpi{x_1}{A_1}{\ldots\typedpi{x_n}{A_n}{(a\app B_1\app\ldots\app
+    B_m)}}\]
+}
+
+\begin{uncoverenv}<3->
+For the case of a nominal constant from $G$, there are two different
+possibilities to consider
+
+\smallskip
+\begin{itemize}
+\item it is in the explicit part of $G$ or from a block in the
+  elaborated part of a context variable
+
+\smallskip
+\item it is from a yet to be elaborated part of a context variable
+\end{itemize}
+\end{uncoverenv}
+
+\medskip
+\uncover<4->{To structure the discussion, we ignore initially the
+  latter possibility}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Analyzing LF Derivability for an Atomic Type (Contd)}
+
+Suppose, then, that $u$ is a symbol declared in $\Sigma$ or the
+explicit or elaborated part of $G$ with type 
+\[\typedpi{x_1}{A_1}{\ldots\typedpi{x_n}{A_n}{(a\app B_1\app\ldots\app
+    B_m)}}\] 
+
+%\bigskip
+
+For $1 \leq i \leq n$, let $t_i$ be terms constructed by raising a new
+eigenvariable $X_i$ over the nominal constants determined by $G$
+
+\medskip
+Then for each substitution $\sigma$ in a complete set of unifiers for
+\begin{tabbing}
+\quad\=$\{\langle M, (u\app t_1\app \ldots \app t_n)\rangle,\ $\=\kill
+\> $\{\langle M, (u\app t_1\app \ldots \app t_n)\rangle, \langle N_1, B_1[t_1/x_1,\ldots,t_n/x_n]\rangle, \ldots,$\\
+\>\>$\langle N_m,B_m[t_1/x_1,\ldots,t_n/x_n] \rangle\}$
+\end{tabbing}
+
+we must consider as a premise the sequent obtained by
+
+\begin{itemize}
+\item replacing $\{G \vdash {M : a\app N_1\ldots\app N_m}\}$  in the
+  assumptions with
+  $\{\lfder{G}{X_1:A_1}\},\ldots,\{\lfder{G}{X_n:A_n[t_1/x_1,\ldots,t_{n-1}/x_{n-1}]}\}$
+
+\smallskip
+\item and applying the substitution $\sigma$ to the result
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Analyzing LF Derivability for an Atomic Type (Contd)}
+
+Let us now treat the case where the typing derivation uses a
+declaration from the as yet unelaborated part of the context
+
+\bigskip
+suppose the implicit part of the context G is governed by the 
+declaration $\Gamma : id[b_1,\ldots,b_p]$
+
+\bigskip
+The typing derivation could have used declarations arising from a block
+$(x_1:A_1,\ldots,x_n:A_n).[y_1:B_1,\ldots,y_m:B_m]$ in $id$
+
+\bigskip
+Moreover these declarations could appear anywhere in the sequence
+arising from $b_1,\ldots, b_p$
+
+\bigskip
+\emph{Block elaboration} manifests these declarations by adding a new
+block to the type of $\Gamma$
+
+\bigskip
+Declarations in such a block can then be used in the case analysis in
+the previously described manner
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Elaborating a Block}
+
+To elaborate $(x_1:A_1,\ldots,x_n:A_n).[y_1:B_1,\ldots,y_m:B_m]$ after 
+$b_j$ in the context declaration $\Gamma : id[b_1,\ldots,b_p]$ in a sequent 
+
+\begin{itemize}
+\item Generate terms $s_1, \ldots, s_n$ by raising new eigenvariables
+  $Z_1, \ldots, Z_n$ over the nominal constants in $b_1,\ldots b_j$
+
+\medskip
+\item Rename $y_1,\ldots, y_m$ with new nominal constants
+  $n_1,\ldots,n_m$ in $B_1,\ldots, B_m$ and insert 
+  \[(n_1:B_1[s_1/x_1,\ldots,s_n/x_n],\ldots,n_m:B_m[s_1/x_1,\ldots,s_n/x_n])\]
+  after $b_j$ in the context declaration
+
+\medskip
+\item Raise all existing eigenvariables in the sequent over
+  $n_1,\ldots, n_m$
+
+\medskip
+\item For $1 \leq i \leq n$, add $\{\lfder{G}{s_i:
+  A_i[s_1/x_1,\ldots,s_{i-1}/x_{i-1}]}\}$ to the assumption formulas
+  of the sequent
+\end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{An Example}
+
+Let $tyctx$ be defined by $tyctx = (T:\sty).[x:\stm,y:\of\app x \app T]$
+
+\bigskip
+Consider a sequent whose eigenvariables include $D$, $E$ and $Ty$ and
+with the context declaration $\Gamma : tyctx[.]$
+
+
+\bigskip
+The analysis of $\{\lfder{\Gamma}{D : \of\app E\app Ty}\}$ based
+on block elaboration in such a sequent will result in the following
+
+\smallskip
+\begin{itemize}
+\item The declaration of $\Gamma$ in the context declarations part
+  will be replaced by $\Gamma : tyctx[n_1 : \stm, n_2 : \of\app n_1\app T]$
+
+\medskip
+\item The sequent will be modified by the bindings $D = n_2$, $E =
+  n1$, $Ty = T$
+
+\medskip
+\item The assumptions will be augmented with $\{\lfder{\Gamma}{T : \sty}\}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Soundness for the Case Analysis Rule}
+
+We can argue that the consideration of cases is exhaustive if we can
+assume that all expressions are well-typed in LF
+
+\medskip
+\uncover<2->{However, we only know that the sequent is \emph{weakly
+    well-typed}} 
+
+\bigskip
+\begin{uncoverenv}<3->
+To address this problem, the application of the rule is conditioned on
+the existence of an untyped CSU in each case such that 
+
+\begin{itemize}
+\item it can be shown to be weakly type preserving with respect to
+  \emph{every} weak well-typing for the terms to be unified
+
+\smallskip
+\item the application of the substitution preserves any a priori known
+  weak well-typing
+\end{itemize}
+\end{uncoverenv}
+
+\bigskip
+\uncover<4->{At a pragmatic level, we show that pattern unification
+  generates a most general unifier with these properties}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Treating Induction in the Logic}
+
+The goal is to support an Abella style treatment of induction
+
+\begin{itemize}
+\item identify a typing judgement in a formula on which to base the
+  induction
+
+\smallskip
+\item assume the validity of the formula for any unfolded version of
+  the typing judgement
+\end{itemize}
+
+\medskip
+The formal structure of such a rule requires parameterizing formulas
+of the $\{ \lfder{\Gamma}{M : A}\}$ with a natural number
+
+\bigskip
+The soundness of the rule can be argued based on an induction on
+natural numbers
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Project Status and Ongoing Developments}
+
+\begin{itemize}
+\item We (think we) have a proof of soundness of case analysis but are
+  still checking the details
+
+\bigskip
+\item The plan for treating induction needs to be articulated
+  precisely and then proved to be sound
+
+\bigskip
+\item We intend to implement the logic and determine its scope and
+  usefulness via example applications
+
+\bigskip
+\item We would like to refine the case analysis rule to make it less
+  restrictive without losing soundness
+\end{itemize}
+
+\end{frame}
+
+\end{document}

@@ -1,0 +1,667 @@
+% $Header:
+% /cvsroot/latex-beamer/latex-beamer/solutions/conference-talks/conference-ornate-20min.en.tex,v 1.6 2004/10/07 20:53:08 tantau Exp $
+
+%\documentclass[handout]{beamer}
+\documentclass{beamer}
+\usepackage{xspace}
+\usepackage{listings}
+\usepackage{relsize}
+\usepackage{proof}
+\RequirePackage{amsmath,amssymb}
+%\usepackage{enumerate}
+
+%\usepackage{hyperref}
+\usepackage{pgfarrows}
+\usepackage{amsmath,amssymb}
+%\usepackage{proof}
+% remove next three lines for animated slides
+%% \usepackage{pgfpages}
+%% \pgfpagesuselayout{4 on 1}[letterpaper,border shrink=5mm,landscape]
+%% \mode<handout>{\setbeamercolor{background canvas}{bg=black!5}}
+
+\def\kwd#1{\ensuremath{\text{\ttfamily #1}}\xspace}
+\def\sep{\; | \;}
+\newcommand{\clause}[3]{\forall #1 .\; #2 \triangleq #3}
+\newcommand{\clausesans}[2]{#1 \triangleq #2}
+\newcommand{\defcases}[2]{\ensuremath{\mathit{cases}(#1,#2)}}
+\newcommand{\csu}[2]{\ensuremath{\mathit{CSU}(#1,#2)}}
+\newcommand{\gencsu}[2]{\ensuremath{\mathit{CSU_{gen}}(#1,#2)}}
+\newcommand{\seq}[1]{\overline{#1}}
+\newcommand{\sequent}[3]{#1 : #2 \longrightarrow #3}
+\newcommand{\schmsequent}[4]{[#1]\; #2 : #3 \longrightarrow #4}
+\newcommand{\forallx}[2]{\forall #1. #2}
+\newcommand{\somex}[2]{\exists #1. #2}
+\newcommand{\app}{\;}
+\newcommand{\typapp}{\;}
+\newcommand{\clauseheader}[1]{\forall #1 .}
+\newcommand{\atm}{\kwd{atm}}
+\newcommand{\atmconst}{\kwd{atm}}
+\def\scons{\mathbin{\kwd{\upshape ::}}}
+\newcommand{\prog}{\kwd{prog}}
+\def\klist{\kwd{list}}
+\newcommand{\append}{\kwd{append}}
+\newcommand{\nil}{\kwd{nil}}
+\newcommand{\strue}{\kwd{true}}
+\newcommand{\typedsomex}[3]{\exists #2 : #1. #3}
+\newcommand{\omic}{\kwd{o}}
+\def\rand{\land}
+\newcommand{\sconj}{~\&~}
+\newcommand{\typenat}{\kwd{nat}}
+\newcommand{\prove}{\kwd{seq}}
+\newcommand{\s}{\kwd{s}}
+\newcommand{\kint}{\kwd{int}}
+\newcommand{\ra}{\rightarrow}
+\def\prop{\kwd{prop}}
+\newcommand{\appsubst}[2]{#2 #1}
+\newcommand{\apptysubst}[2]{#2 #1}
+\newcommand{\schmclause}[4]{[#1]\clause{#2}{#3}{#4}}
+\def\keq{\kwd{eq}}
+\newcommand{\cinst}[2]{#1_{[#2]}}
+\def\kp{\kwd{p}}
+\newcommand{\schmthm}[2]{[#1]#2}
+
+%\input{header}
+% This file is a solution template for:
+
+% - Talk at a conference/colloquium.
+% - Talk length is about 20min.
+% - Style is ornate.
+
+
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  %\usetheme{Boadilla}
+  %\usetheme{Dresden}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[latin1]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+
+\title[Polymorphic Abella]{Schematic
+  Polymorphism\\ in the Abella Proof Assistant}
+
+
+\author{Gopalan Nadathur}
+% - Give the names in the same order as the appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute{Department of Computer
+  Science and Engineering \\
+University of Minnesota}
+
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date[LIX, Ecole Polytechnique, July 2018] % (optional, should be abbreviation of conference name)
+{Joint work with Yuting Wang}
+% - Either use conference name or its abbreviation.
+% - Not really informative to the audience, more for people (including
+%   yourself) who are reading the slides online
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command:
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{The Abella Proof Assistant}
+
+An interactive theorem proving system with the following
+characteristics
+
+\medskip
+\begin{itemize}
+\item Based on a (first-order) logic over lambda terms that
+  incorporates (least and greatest) fixed point definitions
+
+\medskip
+\item Embeds an executable (first-order) specification logic also over
+  lambda terms
+
+\medskip
+\item Provides a vehicle for implementing and verifying rule-based
+  systems exploiting higher-order abstract syntax
+
+\medskip
+\item Both the reasoning logic and the specification logic are simply
+  typed
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{The Problems with Monomorphic Typing}
+
+In implementation and reasoning tasks, we often need to treat
+library data structures and operations at different types
+
+\bigskip
+
+For example, in verified compilation we may need to
+
+\medskip
+\begin{itemize}
+\item specify lists and operations on them for
+  managing bound variables in different intermediate languages
+
+\medskip
+\item prove properties concerning these data structures
+  such as the following
+
+  \medskip
+  \begin{itemize}
+    \item if a list is independent of a binder then every element of
+      the list must also be similarly independent
+
+    \medskip
+    \item every member of the component lists is included in the list
+      produced by the union operation
+  \end{itemize}
+\end{itemize}
+
+\medskip
+With monomorphic typing, such developments have to be repeated
+several times
+
+\medskip
+
+Our goal is to make them more concise and modular
+
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Outline of the Talk}
+
+\begin{itemize}
+  \item Introduce the aspects of the (simply-typed) logic that
+    complicate parameterization based on types
+
+\bigskip
+   \item Present the parameterization of the language and definitions
+     by types
+
+\bigskip
+   \item Describe the lifting of proof rules to support the
+     construction of ``schematic'' proofs
+\end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{The Treatment of Fixed-Point Definitions}
+
+Predicate constants are treated as defined symbols whose meanings are
+given by clauses of the form
+\[ \clause{x_1:\alpha_1,\ldots,x_n:\alpha_n}{p\app t_1\app\ldots\app t_n}{B} \]
+
+
+\smallskip
+The logic is parameterized by a definition, which is a collection of
+such clauses introduced in \emph{definition blocks}
+
+\bigskip
+Definitions are given a fixed-point interpretation via rules
+for introducing atomic formulas in a sequent-style presentation
+
+\medskip
+\begin{itemize}
+\item The right introduction rule realizes the idea of backchaining
+
+\medskip
+\item The left introduction rule codifies case analysis, which builds
+  in equality based on term structure
+\end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{The Left Introduction Rule for Definitions}
+
+\vspace{-0.2cm}
+
+Let ${\cal S}$ be the sequent  $\sequent{\Sigma}{\Gamma, A}{F}$, where
+$\Sigma$ represents the eigenvariable context 
+
+\medskip
+\uncover<2->{Let $\csu{A}{A'}$ represents a \emph{complete set of unifiers} for
+(the atomic formulas or terms) $A$ and $A'$}
+
+\bigskip
+\begin{uncoverenv}<3->
+For definition $\cal D$, let $\defcases{\cal S}{\cal D}$ be the set of sequents
+\begin{tabbing}
+\quad\=\quad\=\kill
+\>$\{ \sequent{\Sigma \theta}{\Gamma\theta, B\theta}{F\theta}\ \sep$
+\ $\clause{\seq{x}}{A'}{B} \in {\cal D}\ \mbox{\it and}\ \theta \in \csu{A}{A'} \}$
+\end{tabbing}
+where $\Sigma \theta$ removes eigenvariables in the domain of $\theta$
+and adds those in its range
+\end{uncoverenv}
+
+\bigskip
+\begin{uncoverenv}<4->
+Then, if $\cal D$ is a variant of the parameterizing definition that
+is named away from $\Sigma$, the left introduction rule is the following
+  
+\begin{center}
+\begin{tabular}{c}
+\infer[]
+      {\sequent{\Sigma}{\Gamma, A}{F}}
+      {\defcases{\sequent{\Sigma}{\Gamma, A}{F}}{\cal D}}
+\end{tabular}
+\end{center}
+\end{uncoverenv}
+
+\uncover<5->{A point to note: this rule is sensitive to type information}
+\end{frame}
+
+\begin{frame}
+\frametitle{Encoding the Specification Logic}
+
+Realized by lifting its vocabulary into the reasoning logic and
+capturing its derivation relation in a definition
+
+\medskip
+\begin{uncoverenv}<2->
+For example, limiting to the Horn clause fragment, the latter can be
+done by the following definition for the \prove predicate
+
+\begin{tabbing}
+\quad\=\quad\=\kill
+\>$\clause{}{\prove\app \strue}{\top}$\\
+\>$\clause{g_1 : \omic, g_2 : \omic}{\prove\app (g_1 \sconj g_2)}
+          {(\prove\app g_1) \rand (\prove\app n \app g_2)}$\\
+\>$\clause{a:\atm}{\prove\app (\atmconst\app a)}
+          {\typedsomex{\omic}{g}{(\prog\app a \app g) \rand (\prove \app g)}}$
+\end{tabbing}
+
+\medskip
+where \prog is used to encode particular specifications, e.g.
+
+\begin{tabbing}
+\;\=\;\=\kill
+\>$\clause{\ell:\klist}{\prog\app (\append\app \nil\app \ell\app \ell)\app \strue}{\top}$\\
+\>$\clauseheader{x:\iota,\ell_1:\klist, \ell_2:\klist, \ell_3:\klist}$\\
+\>\>$\clausesans{\prog\app (\append\app (x\scons  \ell_1)\app \ell_2\app (x \scons \ell_3)) \app
+   (\atmconst\app (\append\app \ell_1\app \ell_2\app \ell_3))}{\top}$
+\end{tabbing}
+\end{uncoverenv}
+
+\uncover<3->{Note that this kind of encoding relies on the
+  specifications also being simply typed}
+\end{frame}
+
+\begin{frame}
+\frametitle{Schematizing the Vocabulary}
+
+Realized by introducing type variables and mechanisms for using them
+in type and term formation
+
+\begin{itemize}
+\item Add type constructors and permit variables in type expressions
+
+\medskip
+\item Type term constants with type schemata that make explicit the
+  parameterization, e.g.
+
+\begin{center}
+\begin{tabular}{rcl}
+$\scons$ & : & $[A]A \ra (\klist A) \ra (\klist A)$\\
+$\forall$ & : & $[A](A \ra \prop) \ra \prop$
+\end{tabular}
+\end{center}
+
+Type instances of constants will be depicted using a list of types as
+subscripts, e.g., $\scons_{[\kint]}$
+
+\medskip
+\item Permit type instantiation for constants in the type checking
+  process underlying term formation
+\end{itemize}
+
+\medskip
+Terms formed in this way that have type variables in their types
+represent a collection of simply typed terms
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Schematizing Definitions}
+
+Two forms of type parameterization are useful
+
+\medskip
+\begin{itemize}
+\item Parameterizing particular clauses with types
+
+\medskip
+This provides a means for succinctly including all the type instances
+of the clause within a definition block
+
+\bigskip
+\item Parameterizing a definition block with types
+
+\medskip
+This provides a succinct means for including the collection of blocks
+obtained by type instantation within the definition
+\end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Schematic Clauses}
+
+A structure of the following sort where $\Psi$ is a listing of type
+variables
+\[ [\Psi]\clause{\seq{x:\alpha}}{A}{B} \]
+A proviso: all the type variables in the body must appear in the head
+of the clause
+
+\bigskip
+\begin{uncoverenv}<2->
+This kind of parameterization permits the encoding of schematic
+specification logic clauses, e.g.
+\begin{tabbing}
+\quad \=\kill
+\>$\schmclause{A}{\ell:\klist\typapp A}{\prog\app (\append_{[A]} \app \nil_{[A]}\app \ell\app \ell)\app \strue}{\top}$\\
+\end{tabbing}
+\end{uncoverenv}
+
+%\medskip
+\begin{uncoverenv}<3->
+Note that the header need not mention all the type variables in the
+clause, e.g. the following clause is okay
+\begin{tabbing}
+\quad\=\kill
+\>$\clause{\ell:\klist\typapp A}{\append_{[A]} \app \nil_{[A]}\app \ell\app \ell)}{\top}$
+\end{tabbing}
+\end{uncoverenv}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Schematic Definition Blocks}
+
+\vspace{-0.2cm}
+The entire block can also be parameterized by a type variable header
+
+\medskip
+\begin{uncoverenv}<2->
+Provisos to the parameterization
+
+\begin{itemize}
+\item All the type variables in the type of each predicate constant
+  defined in the block must appear in the header
+
+\medskip
+\item Each defined predicate must appear at the most general type
+  throughout the definition
+
+\medskip
+\item Header must be disjoint from the type parameters for the clauses
+  in the block
+
+\medskip
+\item All the type variables in a schematic clause must appear in
+  the header of the clause or of the definition block  
+\end{itemize}
+\end{uncoverenv}
+
+\smallskip
+
+\uncover<3->{The schematic block represents actual definition blocks
+  generated by type instantiation}
+
+\medskip
+\uncover<4->{The provisos ensure a simple stratification of
+  definitions introduced by such blocks}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Rationalized Form of a Schematic Clause}
+
+A schematic clause can contain type variables that do not appear in
+its type header
+
+\bigskip
+However, the header can be \emph{rationalized} to include all and
+only the type variables appearing the clause
+
+\bigskip
+Note that the order of listing or the names used for type
+variables is not significant
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Schematic Theorems and their Proofs}
+
+A formula with type variables represents a theorem only if all its
+type instances are theorems
+
+\bigskip
+\begin{uncoverenv}<2->
+There are still some choices in the actual interpretation, though
+
+\begin{enumerate}
+\item Provable at all type instances based on an existing type vocabulary
+
+\medskip
+\item  Provable at all potential type instances, possibly with
+  different proofs at different instances
+
+ \medskip
+ \item Provable at each potential type instance with a proof that has
+   the ``same structure''
+ \end{enumerate}
+\end{uncoverenv}
+
+\uncover<3->{ We take the second possibility as the defining criterion
+  for a  \emph{schematic theorem}}
+
+ \medskip
+ \uncover<4->{However, we generate only those proofs for such theorems
+   that are  independent of type structure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Searching for Schematic Proofs}
+
+The key intuition: Proof search must not instantiate or add to
+the type variables in the original formula
+
+\medskip
+\begin{uncoverenv}<2->
+This intuition is implemented using the following ideas
+
+\begin{itemize}
+\item Proof states are characterized by sequents that are
+  parameterized by a set of type variables, i.e. of the form
+
+  \[\schmsequent{\Psi}{\Sigma}{\Gamma}{F} \]
+
+\medskip
+\item Proof rules are lifted in such a way that they hold fixed the 
+  collection of parameterizing type variables
+
+\medskip
+\item The type instantiation of the lifted rules must yield actual
+  proof rules
+\end{itemize}
+\end{uncoverenv}
+
+\medskip
+\uncover<3->{The lifting of proof rules is in fact straightforward in
+  all cases other than the left introduction rule for definitions}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{Type Generic CSUs}
+
+ To overcome the sensitivity of the definition left rule to types, we
+ focus on unifiers that have a generic structure
+
+ \bigskip
+ \begin{uncoverenv}<2->
+ {\bf Definition} 
+
+ \medskip
+ A \emph{type generic CSU} for two (schematic) terms $t_1$ and $t_2$
+ is a set of (type generic) substitutions $\Theta$ such that a CSU for 
+ any type instances of $t_1$ and $t_2$ can be obtained simply through
+ a corresponding type instantiation of $\Theta$
+  
+ \bigskip
+ To ensure independence from the type vocabulary, we extend the notion
+ of CSUs to terms with variables in their types
+ \end{uncoverenv}
+
+\bigskip
+\uncover<3->{Type generic CSUs can be computed by processes like
+  higher-order pattern unification that are not affected by typing}
+
+%% \bigskip
+%% A type generic CSU for $t_1$ and $t_2$ is denoted by $\gencsu{t_1}{t_2}$
+\end{frame}
+
+\begin{frame}
+\frametitle{Type Generic Case Analysis and Substitutions}
+
+Let $\cal S$ be the sequent $\schmsequent{\Psi}{\Sigma}{\Gamma,A}{F}$
+
+\medskip
+Also, let $C = \schmclause{\Psi'}{\seq{x:\alpha}}{A'}{B}$ be a rationalized
+schematic clause such that $\Psi'$ is disjoint from $\Psi$
+
+\bigskip
+\begin{uncoverenv}<2->
+Then $\cal S$ has a type generic analyzing CSU $\Theta$ with respect
+to $C$ if either
+
+\smallskip
+\begin{enumerate}
+  \item no type instances of $A$ and $A'$ are unifiable and $\Theta =
+    \emptyset$, or
+
+  \medskip
+\item there is a type substitution $\varphi$ with domain $\Psi'$ and
+  range well-formed in $\Psi$ such that
+
+  \smallskip
+  \begin{enumerate}[(a)]
+  \item $\Theta$ is a type generic CSU for $A$ and $A\varphi$, and
+
+   \medskip
+   \item Any type substitution that renders $A$ and $A'$ unifiable is
+      an instance of $\varphi$
+  \end{enumerate}
+\end{enumerate}
+\end{uncoverenv}
+
+\bigskip
+\begin{uncoverenv}<3->
+In this case, case analysis on the clause yields the set of sequents
+\[   \{ \schmsequent{\Psi}{\Sigma \theta}{\Gamma\theta,
+  \appsubst{\theta}{\apptysubst{\phi}{B}}}{D\theta}\ \sep\ \theta \in
+\Theta \}
+\]
+\end{uncoverenv}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{The Schematic Definition Left Rule}
+
+Applies only if the concluding sequent has a type generic analyzing
+CSU wrt the rationalized form of \emph{every} clause
+
+\bigskip
+The premise sequents are then the collection of all the sequents
+resulting from case analysis on each clause
+\end{frame}
+
+\begin{frame}
+\frametitle{Sound and Completeness}
+
+The schematic proof system is sound
+
+\medskip
+{\bf Theorem}
+
+\smallskip
+Type instantiations of schematic proofs yield valid proofs in the
+underlying simply typed logic
+
+\bigskip
+\uncover<2->{However, the system is not complete}
+
+\medskip
+\begin{uncoverenv}<3->
+For example, given $\kp:[A]A \ra \iota$ and $\keq:\iota
+\ra\iota\ra \prop$ defined by the clause
+$\clause{x:\iota}{\keq\app x\app x}{\top}$, consider
+
+\begin{tabbing}
+  \quad\=\qquad\=\kill
+\>$\schmthm{A,B}{\forallx{x:A, f:A \to B}{\somex{y:B}{}}}$\\
+\>\>$(\keq\app (\cinst{\kp}{A}\app x)\app (\cinst{\kp}{B}\app y))
+             \lor ((\keq \app (\cinst{\kp}{A}\app x) \app
+             (\cinst{\kp}{B}\app y)) \supset \bot)$
+\end{tabbing}
+\end{uncoverenv}
+
+\begin{uncoverenv}<4->
+Every type instance of this formula has a proof:
+
+\smallskip
+\begin{itemize}
+\item $A = B$: pick $y$ to be whatever $x$ is instantiated to
+
+\smallskip
+\item $A \neq B$: pick $y$ to be $(f\app t)$ if $x$ is instantiated to
+  $t$
+\end{itemize}
+\end{uncoverenv}
+
+\smallskip
+\uncover<5->{However, there is no schematic proof for the formula}
+\end{frame}  
+
+\begin{frame}[t]
+\frametitle{Conclusion}
+
+\begin{itemize}
+\item These ideas have been developed to cover the full reasoning and
+  specification logics underlying Abella
+
+\bigskip
+\item They have also been implemented and used in our compiler
+  verification work; see Yuting's doctoral thesis 
+
+\bigskip
+\item This work builds on the approach to realizing ``polymorphism''
+  in $\lambda$Prolog; see paper with Frank Pfenning
+
+\bigskip
+\item A light-weight approach that could be used in related systems
+  like Twelf and Beluga
+\end{itemize}
+\end{frame}
+
+\end{document}
