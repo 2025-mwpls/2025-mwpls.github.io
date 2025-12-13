@@ -790,7 +790,7 @@ should follow these instructions for receiving your reimbursement.
    reimbursed
 2. Review [this template](https://docs.google.com/document/d/1cTAP92nSVkUUBybUSD3EsqwO6Is5jI9xlAii3Ucx8YI/edit?usp=sharing&urp=gmail_link) showing how to ask for your reimbursement.
 3. By **January 9, 2026** send your reimbursement request - in the
-   style of the above template - to cse-reimbursements@umich.edu.
+   style of the above template - to [cse-reimbursements@umich.edu](cse-reimbursements@umich.edu).
 
 
 # Sponsors
