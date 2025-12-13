@@ -781,6 +781,16 @@ ramps. Information on these facilities can be found in the
 **University Parking** section of the [Keller
 Hall](https://campusmaps.umn.edu/kenneth-h-keller-hall) web page. 
 
+## Travel Grant Reimbursements
+
+If you received a Travel Grant to cover part of your expenses then you
+should follow these instructions for receiving your reimbursement.
+
+1. Collect that (digital) receipts for which you expect to be
+   reimbursed
+2. Review [this template](https://docs.google.com/document/d/1cTAP92nSVkUUBybUSD3EsqwO6Is5jI9xlAii3Ucx8YI/edit?usp=sharing&urp=gmail_link) showing how to ask for your reimbursement.
+3. By **January 9, 2026** send your reimbursement request - in the
+   style of the above template - to cse-reimbursements@umich.edu.
 
 
 # Sponsors
