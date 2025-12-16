@@ -784,13 +784,28 @@ Hall](https://campusmaps.umn.edu/kenneth-h-keller-hall) web page.
 ## Travel Grant Reimbursements
 
 If you received a Travel Grant to cover part of your expenses then you
-should follow these instructions for receiving your reimbursement.
+should follow these **NEW** instructions for receiving your reimbursement.
 
 1. Collect that (digital) receipts for which you expect to be
-   reimbursed
-2. Review [this template](https://docs.google.com/document/d/1cTAP92nSVkUUBybUSD3EsqwO6Is5jI9xlAii3Ucx8YI/edit?usp=sharing&urp=gmail_link) showing how to ask for your reimbursement.
-3. By **January 9, 2026** send your reimbursement request - in the
-   style of the above template - to [cse-reimbursements@umich.edu](cse-reimbursements@umich.edu).
+   reimbursed. We recommend submitting these for more than the amount
+   of your travel grant (assuming the travel grant does not cover all
+   of your expenses) in case there are extra funds that can be
+   distributed. 
+
+2. Use [this Google Form](https://docs.google.com/forms/d/1uPCUPg9fOkJZII2SV4K6IHUmXKmGNifAXvPhE8RPpfQ/viewform?ts=627a8b15&edit_requested=true)
+   to initiate the reimbursement process.
+   
+   On the form, indicate that the reimbursement is for "travel related
+   to academics or research".
+   
+   Attach your receipts and also a PDF of the email you received
+   that notified you of your travel grants and its amount.
+
+
+   For the approved shortcode at the end of the form, use 013389.
+   
+3. This must be completed by **January 9, 2026**.
+
 
 
 # Sponsors
