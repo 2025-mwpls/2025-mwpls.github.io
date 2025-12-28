@@ -248,6 +248,7 @@ Hall. Dinner will be an informal, buy-your-own affair, but we intend to organize
                 We introduce <i>structural information</i> flow, which both illuminates and addresses these issues from a logical viewpoint. In particular, we draw on established insights from the modal logic literature to argue that information flow reasoning arises from <i>hybrid logic</i>, rather than conventional modal logic as previously imagined. We show with a range of examples that structural information flow specifications are straightforward to write and easy to visually parse. Uniquely in the structural setting, we demonstrate that declassification emerges not as an aberration to non-interference, but as a <i>natural</i> and <i>unavoidable</i> consequence of sufficiently general machinery for information flow. This flavor of declassification features excellent local reasoning and enables our approach to account for real-world information flow needs without compromising its theoretical elegance. Finally, we establish non-interference via a logical relations approach, showing off its simplicity in the face of the expressive power captured.
                 </span>
               </span>
+              ([slides](slides/hemant-gouni.pdf)
             </p>
           </td>
         </tr>
